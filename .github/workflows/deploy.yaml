@@ -11,6 +11,7 @@ concurrency:
 
 jobs:
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -24,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Build
         run: |
-          yarn add @redocly/openapi-cli
+          yarn global add @redocly/cli
           redocly build-docs openapi.yaml -o index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5

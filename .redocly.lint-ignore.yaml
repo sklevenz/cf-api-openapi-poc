@@ -1,41 +1,13 @@
 # This file instructs Redocly's linter to ignore the rules contained for specific parts of your API.
 # See https://redoc.ly/docs/cli/ for more information.
 openapi.yaml:
-  no-identical-paths:
-    - '#/paths/~1v3~1apps~1{guid}~1features~1{feature_name}'
-  no-path-trailing-slash:
-    - '#/paths/~1v3~1users~1'
-  path-parameters-defined:
-    - '#/components/parameters/guid/name'
-    - >-
-      #/paths/~1v3~1apps~1{guid}~1features~1{feature_name}/patch/parameters/0/name
-    - '#/paths/~1v3~1apps~1{guid}~1features~1{feature_name}/patch/parameters'
   operation-2xx-response:
     - '#/paths/~1v3~1droplets~1{droplet_guid}~1download/get/responses'
-  spec:
-    - >-
-      #/paths/~1v3~1deployments/post/requestBody/content/application~1json/schema/properties/description
-  operation-operationId-unique:
-    - >-
-      #/paths/~1v3~1apps~1{guid}~1features~1{feature_name}/patch/updateAppFeature
+    - '#/paths/~1v3~1packages~1{guid}~1download/get/responses'
   security-defined:
     - '#/paths/~1v3~1buildpacks/get'
-    - '#/paths/~1v3~1stacks/get'
-    - '#/paths/~1v3~1stacks/post'
-    - '#/paths/~1v3~1stacks~1{stack_guid}/get'
-    - '#/paths/~1v3~1stacks~1{stack_guid}/delete'
-    - '#/paths/~1v3~1stacks~1{stack_guid}/patch'
-    - '#/paths/~1v3~1tasks/get'
-    - '#/paths/~1v3~1tasks/post'
-    - '#/paths/~1v3~1tasks~1{task_guid}/get'
-    - '#/paths/~1v3~1tasks~1{task_guid}/delete'
-    - '#/paths/~1v3~1tasks~1{task_guid}/patch'
     - '#/paths/~1v3~1users/get'
     - '#/paths/~1v3~1users/post'
-    - '#/paths/~1v3~1users~1{guid}/get'
-    - '#/paths/~1v3~1users~1/get'
-    - '#/paths/~1v3~1users~1/delete'
-    - '#/paths/~1v3~1users~1/patch'
     - '#/paths/~1v3~1droplets/get'
     - '#/paths/~1v3~1domains/get'
     - '#/paths/~1v3~1deployments/get'

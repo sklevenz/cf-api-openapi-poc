@@ -11,15 +11,13 @@ concurrency:
 
 jobs:
   test:
+    name: Test
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup
-        run: yarn add @redocly/openapi-cli
+        run: yarn global add @redocly/cli
       - name: Stats
         run: redocly stats openapi.yaml --format markdown >> $GITHUB_STEP_SUMMARY
       - name: Lint
