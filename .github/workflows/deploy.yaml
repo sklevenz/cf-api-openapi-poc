@@ -26,13 +26,14 @@ jobs:
       - name: Build
         run: |
           yarn global add @redocly/cli
-          redocly build-docs openapi.yaml -o index.html
+          mkdir -p out
+          redocly build-docs openapi.yaml -o out/index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'index.html'
+          path: 'out'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
