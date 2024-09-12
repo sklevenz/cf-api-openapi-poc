@@ -1,5 +1,7 @@
 # CF V3 API OpenAPI Specification Development
 
+The rendered version can be accessed here: https://flothinkspi.github.io/cf-api-openapi-poc/
+
 # Introduction
 
 In this project, we are developing an OpenAPI Specification for the Cloud Foundry V3 API.
