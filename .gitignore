@@ -3,3 +3,8 @@
 dist
 node_modules
 bin
+.DS_Store
+
+# Yarn files and directories to ignore
+.pnp.*
+.yarn/*
